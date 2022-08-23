@@ -30,7 +30,7 @@ function GetPrices(){
 
     current_wax_pricet.innerHTML = 'Current Wax Price: ' + wax_price;
     current_btk_pricet.innerHTML = 'Current BTK Price: ' + btk_price;
-    current_btk_ppst.innerHTML = '10,000SH = ' + btk_pps + ' BTK';
+    current_btk_ppst.innerHTML = '100,000SH = ' + (btk_pps*10) + ' BTK';
 
     UpdatePrices();
 }
@@ -49,7 +49,7 @@ function UpdatePrices(){
 
     var sph = (sps * 60) * 60;
     var spd = (sph * 24);
-    var btkph = (((sps * 60) * 60) / 10000) * btk_pps;
+    var btkph = (((sps * 60) * 60) / 100000) * btk_pps;
     var btkpd = btkph * 24;
 
     var waxph = btkph * btk_price;

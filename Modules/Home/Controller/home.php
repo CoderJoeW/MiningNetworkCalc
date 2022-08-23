@@ -19,7 +19,7 @@ class Home extends Welcome{
     }
 
     private function GetServerCostDonations(){
-        return 350;
+        return 80;
     }
 
     public function GetBtkPPS(){
@@ -113,15 +113,16 @@ class Home extends Welcome{
             'Accepts: application/json'
         ];
   
-        $curl = curl_init(); 
+        $curl = curl_init(); // Get cURL resource
+        // Set cURL options
         curl_setopt_array($curl, array(
-            CURLOPT_URL => $url, 
-            CURLOPT_HTTPHEADER => $headers, 
-            CURLOPT_RETURNTRANSFER => 1
+            CURLOPT_URL => $url,            // set the request URL
+            CURLOPT_HTTPHEADER => $headers,     // set the headers 
+            CURLOPT_RETURNTRANSFER => 1         // ask for raw response instead of bool
         ));
 
-        $response = json_encode(curl_exec($curl));
-        curl_close($curl); 
+        $response = json_encode(curl_exec($curl)); // Send the request, save the response
+        curl_close($curl); // Close request
 
         $data = json_decode(json_decode($response,true),true);
 
@@ -137,22 +138,22 @@ class Home extends Welcome{
 
         $headers = [
           'Accepts: application/json',
-          'X-CMC_PRO_API_KEY: <removed_for_github>'
+          'X-CMC_PRO_API_KEY: 3014d6d5-18fd-4223-88cd-e94cc0281e09'
         ];
 
-        $qs = http_build_query($parameters);
-        $request = "{$url}?{$qs}"; 
+        $qs = http_build_query($parameters); // query string encode the parameters
+        $request = "{$url}?{$qs}"; // create the request URL
 
-        $curl = curl_init(); 
-        
+        $curl = curl_init(); // Get cURL resource
+        // Set cURL options
         curl_setopt_array($curl, array(
-            CURLOPT_URL => $request,           
-            CURLOPT_HTTPHEADER => $headers,  
-            CURLOPT_RETURNTRANSFER => 1       
+            CURLOPT_URL => $request,            // set the request URL
+            CURLOPT_HTTPHEADER => $headers,     // set the headers 
+            CURLOPT_RETURNTRANSFER => 1         // ask for raw response instead of bool
         ));
 
-        $response = json_encode(curl_exec($curl));
-        curl_close($curl); 
+        $response = json_encode(curl_exec($curl)); // Send the request, save the response
+        curl_close($curl); // Close request
 
         $data = json_decode(json_decode($response,true),true);
 

@@ -73,17 +73,15 @@
     <div class="card">
         <h4>Donations</h4>
         <p>
-            Big thank you to everyone who donated torwards the NFT calculator
+            Help keep this site running!
 
-            Below will be progress bars with the cost of keeping the website running.
+            Renewal date is on the 5th of every month!
 
-            Please include note with donations so we know where to put the money
-
-            <span>Send to <b>ifo2o.c.wam</b></span>
+            <span>Send donations to <b>ifo2o.c.wam</b></span>
         
         </p>
 
-        Server Cost Funded <?php echo $server_cost_donations; ?>/350 <b>Wax Note:</b> Server
+        Server Cost Funded <?php echo $server_cost_donations; ?>/350 
         <progress id="file" value="<?php echo $server_cost_donations; ?>" max="350" style="width: 100%"> <?php echo ($server_cost_donations/150)*100; ?>% </progress>
         
         <br>
@@ -95,7 +93,13 @@
     <div class='sticky-ads-close'><button id="adsCloseBtn" onclick="closestickyAds();">X</button></div>
     <div class='sticky-ads-content'>
 
-      This could be your ad space
+      <h2>Big News!</h1>
+
+      <p>The creator of this website is starting a telegram group called Safe BSC Pumps</p>
+      <p>Link <a href="https://t.me/safe_bsc_pumps">https://t.me/safe_bsc_pumps</a></p>
+      <p>The main goal of this group is a sniper bot but the same tokens the sniper chooses to snipe will be posted in this group</p>
+
+      
 
     </div>
 
